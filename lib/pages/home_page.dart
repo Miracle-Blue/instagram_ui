@@ -86,7 +86,8 @@ class _HomePageState extends State<HomePage>
               // snap: true,
               bottom: TabBar(
                 controller: controller,
-                indicatorColor: CustomTheme.isDarkTheme ? Colors.white : Colors.black,
+                indicatorColor:
+                    CustomTheme.isDarkTheme ? Colors.white : Colors.black,
                 tabs: const [
                   Tab(icon: Icon(Icons.apps_outlined)),
                   Tab(icon: Icon(Icons.person_pin_outlined)),
@@ -275,10 +276,7 @@ class _HomePageState extends State<HomePage>
                         width: 60,
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
-                          border: Border.all(
-                              width: 1,
-                              color: Colors.grey
-                          ),
+                          border: Border.all(width: 1, color: Colors.grey),
                           borderRadius: BorderRadius.circular(30),
                         ),
                         child: Container(
@@ -293,10 +291,15 @@ class _HomePageState extends State<HomePage>
                       const SizedBox(
                         height: 7,
                       ),
-                      const Text(
-                        "New",
-                        style: TextStyle(fontSize: 13),
-                      ),
+                      CustomTheme.isDarkTheme
+                          ? const Text(
+                              "Dark",
+                              style: TextStyle(fontSize: 13),
+                            )
+                          : const Text(
+                              "Light",
+                              style: TextStyle(fontSize: 13),
+                            ),
                     ],
                   ),
                 ),

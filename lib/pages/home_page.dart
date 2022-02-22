@@ -80,7 +80,11 @@ class _HomePageState extends State<HomePage>
               toolbarHeight: 340,
 
               /// * title
-              title: title(),
+              flexibleSpace: FlexibleSpaceBar(
+                collapseMode: CollapseMode.pin,
+                background: title(),
+              ),
+
               floating: true,
               pinned: true,
               // snap: true,
